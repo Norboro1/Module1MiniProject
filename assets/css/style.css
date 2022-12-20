@@ -1,0 +1,32 @@
+*
+{
+  margin:0;
+  padding:0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    background-color: rgb(38,97,80);
+    padding: 1% 0;
+    text-align: right;
+    font-size: 20px;
+    border-bottom: 10px solid tan;
+}
+
+body{
+    background-color :ivory;
+}
+
+body h1{
+    font-size: 40px;
+    color: rgb(79,72,70);
+    padding: 10px;
+    text-align: center;
+}
+
+header a{
+    padding: 0px 15px;
+    text-decoration: none;
+    color: white;
+}
+
