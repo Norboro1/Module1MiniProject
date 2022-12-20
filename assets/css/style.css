@@ -1,3 +1,5 @@
+
+/* Set default margin, padding and fonts for all */
 *
 {
   margin:0;
@@ -5,28 +7,162 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* set html and body to fit entire page regardless of content, allow overflow */
+html, body{
+    overflow: auto;
+    height: 100%;
+}
+
+/* Styles for header and header links */
 header{
     background-color: rgb(38,97,80);
     padding: 1% 0;
     text-align: right;
     font-size: 20px;
-    border-bottom: 10px solid tan;
+    border-bottom: 10px solid rgb(210, 166, 140);
 }
 
-body{
-    background-color :ivory;
-}
-
-body h1{
-    font-size: 40px;
-    color: rgb(79,72,70);
-    padding: 10px;
-    text-align: center;
-}
-
+/*spacing and color for header links*/
 header a{
     padding: 0px 15px;
     text-decoration: none;
+    color: white;
+}
+
+/*set background color, center content, and text color for body*/
+body{
+    background-color: rgb(253, 251, 245);
+    text-align: center;
+    color: rgb(79,72,70);
+    margin-bottom: 5%;
+}
+
+/*Styles for body header*/
+body h1{
+    font-size: 4.5vh;
+    color: rgb(79,72,70);
+    padding: 10px;
+}
+
+/*margin and font size for content*/
+content *{
+    margin: 1% 0;
+    font-size: 2.5vh;
+}
+
+/*responsive image style*/
+img{
+    max-height: 100%;
+    max-width: 70vw;
+}
+
+/*Stick form section to bottom of page regardless of content, responsive dimensions, styling */
+section.LandingPageForm {
+    position: sticky;
+    top: 95%;
+    height: 30%;
+    width: 100%;
+    background-color: rgb(231, 203, 187);
+    border-top: solid 4px rgb(224, 176, 150);
+}
+
+/* form section header styles*/
+section.LandingPageForm h1 {
+    font-size: 4.5vh;
+    margin: 1vh;
+    padding:0;
+}
+
+/*responsive dimensions, styling */
+form {
+    width: 60vh;
+    max-width: 100%;
+    max-height: 100%;
+    display: table;
+    margin: auto;
+    padding: 10px 15px;
+    border: solid 5px rgb(224, 176, 150);
+    border-radius: 1.5vh;
+}
+
+/*styling form contents to display properly*/
+label{
+    float: left;
+    font-size: 2vh;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.label{
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+}
+
+.input{
+    float:left;
+    margin-left: 5px;
+    width: 70%;
+    margin-top: 0px;
+}
+
+input[type=text], select, textarea {
+    padding: 1%;
+    border-radius: 0;
+    border-width: 1px;
+    float:left;
+    margin-top: 6px;
+    width: 96%;
+}
+/*Send button styling*/
+input[type=submit] {
+    font-size: 18px;
+    color: white;
+    background-color: rgb(80, 80, 80);
+    padding: 10px;
+    margin-top: 5px;
+    border-top: solid 3px gray;
+    border-left: solid 3px gray;
+    border-bottom: solid 3px black;
+    border-right:solid 3px black;
+}
+
+/* Form section did not behave as responsively as I liked, this improves it*/
+@media (max-width: 600px) {
+    .input, .label {
+      width: 100%;
+      margin-top: 0;
+    }
+    section{
+        height: 40%;
+    }
+  }
+
+@media (max-height: 800px){
+    section{
+        height: 35%;
+    }
+}
+
+/*Keep footer at bottom of page, responsive styling*/
+footer{
+    display: table;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    height: 5%;
+    background-color: rgb(38,97,80);
+}
+
+footer p{
+    font-size: 3vh;
+    display: table-cell;
+    vertical-align: middle;
     color: white;
 }
 
